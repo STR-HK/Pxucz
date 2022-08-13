@@ -10,4 +10,4 @@ def get_fps():
         global_variables.set_var(name=BENCHMARK_FRAMECOUNT, value=0)
         global_variables.set_var(name=BENCHMARK_PREVIOUSTIME, value=glfw.get_time())
         return framecount
-    global_variables.set_var(name=BENCHMARK_FRAMECOUNT, value=framecount+1)
+    global_variables.set_var(name=BENCHMARK_FRAMECOUNT, value=framecount + 1)

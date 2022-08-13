@@ -1,5 +1,5 @@
 ---
-title: Example
+title: License
 author: Cshtarn
 date: 2022-08-14
 category: Jekyll
