@@ -1,12 +1,13 @@
+import os.path
 import subprocess
 import platform
 
 
-def run():
+def run(path):
     try:
         system = platform.system()
         if system == "Windows":
-            command = f"pip freeze > requirements.txt"
+            command = f"pip freeze > {os.path.join(path, 'requirements.txt')}"
             subprocess.run(command, shell=True)
         elif system == "Linux":
             print(system)
