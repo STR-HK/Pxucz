@@ -4,7 +4,7 @@ from Pxucz.benchmark import graphics as benchmark_graphics
 from Pxucz.initial import set_variables as px_set_var
 from OpenGL.GL import *
 
-window = px_window.create_window(1600, 900, "asd")
+window = px_window.create_window(window_width=1600, window_height=900, window_name="asd")
 px_window.set_window_aspect_ratio(window=window, aspect_x=16, aspect_y=9)
 px_window.make_context_current(window=window)
 px_window.swap_interval(interval=0)  # vsync off
