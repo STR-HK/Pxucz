@@ -21,7 +21,17 @@ def loadTexture(texture: str):
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_BASE_LEVEL, 0)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAX_LEVEL, 0)
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texx.size[0], texx.size[1], 0, GL_RGBA, GL_UNSIGNED_BYTE, texxData)
+    glTexImage2D(
+        GL_TEXTURE_2D,
+        0,
+        GL_RGBA,
+        texx.size[0],
+        texx.size[1],
+        0,
+        GL_RGBA,
+        GL_UNSIGNED_BYTE,
+        texxData,
+    )
     texx.close()
     return texxID, texx.size[0], texx.size[1]
 

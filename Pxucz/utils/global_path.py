@@ -2,6 +2,7 @@ import os
 
 global ABS_PATH
 
+
 def set_abs_path(path: str):
     global ABS_PATH
     ABS_PATH = os.path.dirname(path)
