@@ -1,6 +1,6 @@
 from Pxucz.utils.clear_m import prettier, requirements_txt
 
 
-def run():
-    prettier.run()
+def run(path):
+    prettier.run(path)
     requirements_txt.run()

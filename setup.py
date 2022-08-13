@@ -24,5 +24,9 @@ setup(
     long_description_content_type="text/markdown",
     install_requires=requirements,
     zip_safe=False,
-    classifiers=["License :: OSI Approved :: MIT License"],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 )

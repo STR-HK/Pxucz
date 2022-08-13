@@ -3,15 +3,11 @@ import subprocess
 import platform
 
 
-def load_file(filename):
-    return os.path.join(os.path.dirname(__file__), filename)
-
-
-def run():
+def run(path):
     try:
         system = platform.system()
         l_py_files = []
-        for root, dirs, files in os.walk("../"):
+        for root, dirs, files in os.walk(path):
             for file in files:
                 if file.endswith(".py") and root.find("venv") == -1:
                     l_py_files.append(os.path.join(root, file))
