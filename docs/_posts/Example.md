@@ -2,7 +2,7 @@
 title: Example
 author: Cshtarn
 date: 2022-08-14
-category: Pxucz
+category: jekyll
 layout: post
 ---
 
