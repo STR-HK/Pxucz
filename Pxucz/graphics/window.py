@@ -1,6 +1,6 @@
 import glfw
 from OpenGL.GL import *
-
+from OpenGL.GLU import *
 from Pxucz.initial.set_variables import GRAPHICS_FPS_LIMITER
 from Pxucz.utils import global_variables
 
@@ -23,16 +23,16 @@ def set_window_aspect_ratio(window, aspect_x, aspect_y):
     glfw.set_window_aspect_ratio(window=window, numer=aspect_x, denom=aspect_y)
 
 
-def make_context_current(window):
+def make_context_current(window, window_width, window_height, view_ratio):
     glfw.make_context_current(window=window)
+    gluPerspective(45, (window_width / window_height), 0.1, 50.0)
+    glTranslatef(0, 0, view_ratio * -1)
+    glEnable(GL_BLEND)
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 
 
 def window_should_close(window):
     return glfw.window_should_close(window=window)
-
-
-def window_poll_events():
-    return glfw.poll_events()
 
 
 def destroy_window(window):
@@ -41,22 +41,6 @@ def destroy_window(window):
 
 def terminate():
     glfw.terminate()
-
-
-def Clear(FLAGS):
-    glClear(FLAGS)
-
-
-def swap_buffers(window):
-    glfw.swap_buffers(window=window)
-
-
-def get_time():
-    return glfw.get_time()
-
-
-def swap_interval(interval: int):
-    glfw.swap_interval(interval=interval)
 
 
 def set_fps_limit(fps: int):
