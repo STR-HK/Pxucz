@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdf2e79c-ef80-4c9e-b2fe-52d875528e29" name="Changes" comment="" />
+    <list default="true" id="fdf2e79c-ef80-4c9e-b2fe-52d875528e29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +49,7 @@
       <recent name="D:\Github\Pxucz\Pxucz\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.clear (1)">
+  <component name="RunManager" selected="Python.test">
     <configuration name="arrange" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pxucz" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,8 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.clear (1)" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.clear (1)" />
         <item itemvalue="Python.clear" />
         <item itemvalue="Python.arrange" />
         <item itemvalue="Python.test (1)" />
