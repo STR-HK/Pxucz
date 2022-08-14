@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fdf2e79c-ef80-4c9e-b2fe-52d875528e29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/graphics/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/graphics/image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/graphics/texture.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/graphics/texture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/initial/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/initial/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/utils/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/utils/build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/simple_movable_map/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/simple_movable_map/build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/simple_movable_map/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/simple_movable_map/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/simple_movable_map/simple_movable_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/simple_movable_map/simple_movable_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pxucz/graphics/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/graphics/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pxucz/initial/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/initial/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pxucz/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/utils/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
