@@ -1,5 +1,3 @@
-import time
-
 from Pxucz.initial import set_variables
 from Pxucz.utils import global_path
 from OpenGL.GL import *
