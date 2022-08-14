@@ -14,7 +14,9 @@ def build(withconsole, path, filedict, companyname, product_version):
         if system == "Windows":
             clear.run(path=os.path.dirname(path))
             buildfile_name = path
-            Output_dir_name = os.path.join(os.path.dirname(path), f"{pathlib.Path(path).stem}_build")
+            Output_dir_name = os.path.join(
+                os.path.dirname(path), f"{pathlib.Path(path).stem}_build"
+            )
             print(buildfile_name, Output_dir_name)
 
             should_include = []
@@ -29,12 +31,12 @@ def build(withconsole, path, filedict, companyname, product_version):
                     f"python -m nuitka --mingw64 --show-modules --follow-imports "
                     f"--windows-company-name={companyname} --windows-product-version={product_version} "
                     f"--output-dir={Output_dir_name} --verbose --assume-yes-for-downloads --onefile "
-                    f"--include-package=OpenGL_accelerate " 
-                    f"--include-package=PIL " 
+                    f"--include-package=OpenGL_accelerate "
+                    f"--include-package=PIL "
                     f"--enable-plugin=numpy "
                     f"--enable-plugin=pyside6 "
                     f"--enable-plugin=glfw "
-                    )
+                )
                 for i in range(0, len(should_include)):
                     command += f"--include-data-dir={should_include[i]}={filedict[i]} "
                 command += f"{buildfile_name}"
@@ -43,8 +45,8 @@ def build(withconsole, path, filedict, companyname, product_version):
                     f"python -m nuitka --mingw64 --show-modules --follow-imports "
                     f"--windows-company-name={companyname} --windows-product-version={product_version} "
                     f"--output-dir={Output_dir_name} --verbose --assume-yes-for-downloads --onefile "
-                    f"--include-package=OpenGL_accelerate " 
-                    f"--include-package=PIL " 
+                    f"--include-package=OpenGL_accelerate "
+                    f"--include-package=PIL "
                     f"--enable-plugin=numpy "
                     f"--enable-plugin=pyside6 "
                     f"--enable-plugin=glfw "

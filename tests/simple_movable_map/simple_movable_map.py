@@ -98,7 +98,7 @@ while not px_window.window_should_close(window=window):
     glfw.swap_buffers(window=window)
     if Pxucz.input.KeyboardInput.key("esc"):
         break
-    # px_window.set_fps_limit(60)  # Limit FPS by 60
+    px_window.set_fps_limit(60)  # Limit FPS by 60
     # FPS BENCHMARKING
     FPS = benchmark_graphics.get_fps()
     if FPS is not None:
