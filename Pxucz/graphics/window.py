@@ -1,13 +1,13 @@
 import glfw
 from OpenGL.GL import *
 from OpenGL.GLU import *
-from Pxucz.initial.set_variables import GRAPHICS_FPS_LIMITER, INITIAL_LOADER_TEXT
+from Pxucz.initial.set_variables import GRAPHICS_FPS_LIMITER, INITIAL_LOADER_TEXT, INITIAL_LOADER_CLOSE
 from Pxucz.utils import global_variables
-from Pxucz.initial import opener
 
 
 def create_window(window_width: int, window_height: int, window_name: str):
     glfw.window_hint(glfw.RESIZABLE, glfw.FALSE)
+    glfw.window_hint(glfw.VISIBLE, glfw.FALSE)
     global_variables.set_var(name=INITIAL_LOADER_TEXT,
                              value=f"WINDOW = ({window_width}, {window_height}), TITLE={window_name}")
     return (
@@ -61,5 +61,6 @@ def set_fps_limit(fps: int):
     global_variables.set_var(name=GRAPHICS_FPS_LIMITER, value=last + 1 / fps)
 
 
-def task_start():
-    opener.off()
+def task_start(window):
+    glfw.show_window(window=window)
+    global_variables.set_var(name=INITIAL_LOADER_TEXT, value=INITIAL_LOADER_CLOSE)
