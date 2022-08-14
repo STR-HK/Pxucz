@@ -16,21 +16,11 @@ def build(withconsole, path):
 
             buildfile_name = os.path.basename(path)
             Output_dir_name = f"{pathlib.Path(path).stem}_build"
-            icon = os.path.join(
-                os.path.dirname(path), "Icon/OUHO.ico"
-            )
-            IconFolder = os.path.join(
-                os.path.dirname(path), "Icon"
-            )
-            ConfigFolder = os.path.join(
-                os.path.dirname(path), "Config"
-            )
-            FontFolder = os.path.join(
-                os.path.dirname(path), "Font"
-            )
-            ResourcesFolder = os.path.join(
-                os.path.dirname(path), "Resources"
-            )
+            icon = os.path.join(os.path.dirname(path), "Icon/OUHO.ico")
+            IconFolder = os.path.join(os.path.dirname(path), "Icon")
+            ConfigFolder = os.path.join(os.path.dirname(path), "Config")
+            FontFolder = os.path.join(os.path.dirname(path), "Font")
+            ResourcesFolder = os.path.join(os.path.dirname(path), "Resources")
 
             if withconsole:
                 command = (

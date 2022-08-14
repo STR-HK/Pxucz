@@ -1,3 +1,6 @@
+<div align="center">
+<img src="https://raw.githubusercontent.com/Cshtarn/Pxucz/main/Pxucz.png" alt="Logo" width="300" height="300">
+</div>
 <h1 align="center">Pxucz</h1>
 
 <div align="center">

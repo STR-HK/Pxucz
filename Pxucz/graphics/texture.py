@@ -36,8 +36,7 @@ def loadTexture(texture: str):
         texxData,
     )
     texx.close()
-    global_variables.set_var(name=INITIAL_LOADER_TEXT,
-                             value=f"LOADING {texture}")
+    global_variables.set_var(name=INITIAL_LOADER_TEXT, value=f"LOADING {texture}")
     return texxID, texx.size[0], texx.size[1]
 
 

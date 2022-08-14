@@ -1,15 +1,21 @@
 import glfw
 from OpenGL.GL import *
 from OpenGL.GLU import *
-from Pxucz.initial.set_variables import GRAPHICS_FPS_LIMITER, INITIAL_LOADER_TEXT, INITIAL_LOADER_CLOSE
+from Pxucz.initial.set_variables import (
+    GRAPHICS_FPS_LIMITER,
+    INITIAL_LOADER_TEXT,
+    INITIAL_LOADER_CLOSE,
+)
 from Pxucz.utils import global_variables
 
 
 def create_window(window_width: int, window_height: int, window_name: str):
     glfw.window_hint(glfw.RESIZABLE, glfw.FALSE)
     glfw.window_hint(glfw.VISIBLE, glfw.FALSE)
-    global_variables.set_var(name=INITIAL_LOADER_TEXT,
-                             value=f"WINDOW = ({window_width}, {window_height}), TITLE={window_name}")
+    global_variables.set_var(
+        name=INITIAL_LOADER_TEXT,
+        value=f"WINDOW = ({window_width}, {window_height}), TITLE={window_name}",
+    )
     return (
         glfw.create_window(
             width=window_width,
@@ -28,8 +34,9 @@ def set_window_icon(window, image):
 
 
 def set_window_aspect_ratio(window, aspect_x, aspect_y):
-    global_variables.set_var(name=INITIAL_LOADER_TEXT,
-                             value=f"WINDOW_ASPECT = ({aspect_x}, {aspect_y})")
+    global_variables.set_var(
+        name=INITIAL_LOADER_TEXT, value=f"WINDOW_ASPECT = ({aspect_x}, {aspect_y})"
+    )
     glfw.set_window_aspect_ratio(window=window, numer=aspect_x, denom=aspect_y)
 
 
