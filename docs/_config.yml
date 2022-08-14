@@ -11,6 +11,8 @@ url:              'https://cshtarn.github.io/Pxucz/'
 baseurl:          '/'
 rss:              RSS
 
+remote_theme: sighingnow/jekyll-gitbook
+
 toc:
   enabled: true
   h_min: 1
