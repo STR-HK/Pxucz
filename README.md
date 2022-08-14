@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Cshtarn/Pxucz/main/Pxucz.png" align="right" width="200" height="200" />
+<img src="https://raw.githubusercontent.com/Cshtarn/Pxucz/main/Pxucz.png" align="right" width="250" height="250" />
 </div>
 <h1 align="center">Pxucz</h1>
 
