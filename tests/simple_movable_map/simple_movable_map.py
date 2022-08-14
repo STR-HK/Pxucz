@@ -1,5 +1,4 @@
 import math
-import time
 
 import glfw
 
@@ -23,29 +22,79 @@ glfw.swap_interval(0)  # vsync off
 
 AssetSpriteArray = []
 for i in range(0, 130):
-    AssetSpriteArray.append(px_texture.loadTexture(f"assets/tile{str(i).zfill(3)}.png")[0])
+    AssetSpriteArray.append(
+        px_texture.loadTexture(f"assets/tile{str(i).zfill(3)}.png")[0]
+    )
 
 px_window.task_start(window=window)
 while not px_window.window_should_close(window=window):
     glfw.poll_events()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glClearColor(255, 255, 255, 1)
-    px_texture.drawImage(centerX=0, centerY=math.sin(glfw.get_time())/2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=0.1, centerY=math.sin(glfw.get_time()+1) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=0.2, centerY=math.sin(glfw.get_time()+2) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=0.3, centerY=math.sin(glfw.get_time()+3) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=-0.1, centerY=math.sin(glfw.get_time()) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=-0.2, centerY=math.sin(glfw.get_time() + 1) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=-0.3, centerY=math.sin(glfw.get_time() + 2) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
-    px_texture.drawImage(centerX=-0.4, centerY=math.sin(glfw.get_time() + 3) / 2,
-                         textureID=AssetSpriteArray[117], ratio=1, ASPECT_X=ASPECT_X, ASPECT_Y=ASPECT_Y)
+    px_texture.drawImage(
+        centerX=0,
+        centerY=math.sin(glfw.get_time()) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=0.1,
+        centerY=math.sin(glfw.get_time() + 1) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=0.2,
+        centerY=math.sin(glfw.get_time() + 2) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=0.3,
+        centerY=math.sin(glfw.get_time() + 3) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=-0.1,
+        centerY=math.sin(glfw.get_time()) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=-0.2,
+        centerY=math.sin(glfw.get_time() + 1) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=-0.3,
+        centerY=math.sin(glfw.get_time() + 2) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
+    px_texture.drawImage(
+        centerX=-0.4,
+        centerY=math.sin(glfw.get_time() + 3) / 2,
+        textureID=AssetSpriteArray[117],
+        ratio=1,
+        ASPECT_X=ASPECT_X,
+        ASPECT_Y=ASPECT_Y,
+    )
     glfw.swap_buffers(window=window)
     if Pxucz.input.KeyboardInput.key("esc"):
         break

@@ -1,3 +1,5 @@
+tests/simple_movable_map/simple_movable_map_build/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

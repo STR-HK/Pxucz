@@ -2,4 +2,10 @@ import os
 
 from Pxucz.utils import build
 
-build.build(withconsole=False, path="simple_movable_map.py")
+build.build(
+    withconsole=False,
+    path=os.path.abspath("simple_movable_map.py"),
+    filedict=["assets"],
+    companyname="Cshtarn",
+    product_version="0.0.1",
+)

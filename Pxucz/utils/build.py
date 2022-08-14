@@ -7,46 +7,52 @@ import time
 from Pxucz.utils import clear
 
 
-def build(withconsole, path):
+def build(withconsole, path, filedict, companyname, product_version):
     try:
         system = platform.system()
 
         if system == "Windows":
             clear.run(path=os.path.dirname(path))
+            buildfile_name = path
+            Output_dir_name = os.path.join(os.path.dirname(path), f"{pathlib.Path(path).stem}_build")
+            print(buildfile_name, Output_dir_name)
 
-            buildfile_name = os.path.basename(path)
-            Output_dir_name = f"{pathlib.Path(path).stem}_build"
-            icon = os.path.join(os.path.dirname(path), "Icon/OUHO.ico")
-            IconFolder = os.path.join(os.path.dirname(path), "Icon")
-            ConfigFolder = os.path.join(os.path.dirname(path), "Config")
-            FontFolder = os.path.join(os.path.dirname(path), "Font")
-            ResourcesFolder = os.path.join(os.path.dirname(path), "Resources")
+            should_include = []
+            for i in range(0, len(filedict)):
+                should_include.append(os.path.join(os.path.dirname(path), filedict[i]))
 
+            print(should_include)
+
+            # --windows-icon-from-ico={icon}
             if withconsole:
                 command = (
                     f"python -m nuitka --mingw64 --show-modules --follow-imports "
-                    f"--windows-company-name=QU4R7Z --windows-product-version={config.version} "
-                    f"--output-dir={Output_dir_name} --verbose --assume-yes-for-downloads "
-                    f"--windows-icon-from-ico={icon} --onefile "
-                    f"--include-data-dir={IconFolder}=Icon "
-                    f"--include-data-dir={ConfigFolder}=Config "
-                    f"--include-data-dir={FontFolder}=Font "
-                    f"--include-data-dir={ResourcesFolder}=Resources "
-                    f"{buildfile_name}"
-                )
+                    f"--windows-company-name={companyname} --windows-product-version={product_version} "
+                    f"--output-dir={Output_dir_name} --verbose --assume-yes-for-downloads --onefile "
+                    f"--include-package=OpenGL_accelerate " 
+                    f"--include-package=PIL " 
+                    f"--enable-plugin=numpy "
+                    f"--enable-plugin=pyside6 "
+                    f"--enable-plugin=glfw "
+                    )
+                for i in range(0, len(should_include)):
+                    command += f"--include-data-dir={should_include[i]}={filedict[i]} "
+                command += f"{buildfile_name}"
             else:
                 command = (
                     f"python -m nuitka --mingw64 --show-modules --follow-imports "
-                    f"--windows-company-name=QU4R7Z --windows-product-version={config.version} "
-                    f"--output-dir={Output_dir_name} --verbose --assume-yes-for-downloads "
-                    f"--windows-icon-from-ico={icon} --onefile "
-                    f"--include-data-dir={IconFolder}=Icon "
-                    f"--include-data-dir={ConfigFolder}=Config "
-                    f"--include-data-dir={FontFolder}=Font "
-                    f"--include-data-dir={ResourcesFolder}=Resources "
+                    f"--windows-company-name={companyname} --windows-product-version={product_version} "
+                    f"--output-dir={Output_dir_name} --verbose --assume-yes-for-downloads --onefile "
+                    f"--include-package=OpenGL_accelerate " 
+                    f"--include-package=PIL " 
+                    f"--enable-plugin=numpy "
+                    f"--enable-plugin=pyside6 "
+                    f"--enable-plugin=glfw "
                     f"--windows-disable-console "
-                    f"{buildfile_name}"
                 )
+                for i in range(0, len(should_include)):
+                    command += f"--include-data-dir={should_include[i]}={filedict[i]} "
+                command += f"{buildfile_name}"
 
             start = time.time()
             subprocess.run(command.split(" "), shell=True, check=True)
@@ -63,7 +69,3 @@ def build(withconsole, path):
             print("OS를 알 수 없음")
     except Exception as e:
         print(e)
-
-
-if __name__ == "__main__":
-    build(withconsole=True)
