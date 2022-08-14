@@ -40,11 +40,9 @@ def set_window_aspect_ratio(window, aspect_x, aspect_y):
     glfw.set_window_aspect_ratio(window=window, numer=aspect_x, denom=aspect_y)
 
 
-def make_context_current(window, view_ratio):
+def make_context_current(window):
     glfw.make_context_current(window=window)
     window_width, window_height = glfw.get_window_size(window)
-    gluPerspective(45, (window_width / window_height), 0.1, 50.0)
-    glTranslatef(0, 0, view_ratio * -1)
     glEnable(GL_BLEND)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 

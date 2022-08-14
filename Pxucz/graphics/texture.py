@@ -40,8 +40,8 @@ def loadTexture(texture: str):
     return texxID, texx.size[0], texx.size[1]
 
 
-def drawImage(centerX: float, centerY: float, textureID, ratio: float):
-    verts = ((ratio, ratio), (ratio, -ratio), (-ratio, -ratio), (-ratio, ratio))
+def drawImage(centerX: float, centerY: float, textureID, ratio: float, ASPECT_X: int, ASPECT_Y: int):
+    verts = ((ratio / ASPECT_X, ratio/ASPECT_Y), (ratio / ASPECT_X, -ratio/ASPECT_Y), (-ratio / ASPECT_X, -ratio/ASPECT_Y), (-ratio / ASPECT_X, ratio/ASPECT_Y))
     texts = ((1, 0), (1, 1), (0, 1), (0, 0))
     surf = (0, 1, 2, 3)
 
