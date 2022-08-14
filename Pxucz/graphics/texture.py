@@ -1,6 +1,9 @@
 from Pxucz.graphics import image
 from OpenGL.GL import *
 
+from Pxucz.initial.set_variables import INITIAL_LOADER_TEXT
+from Pxucz.utils import global_variables
+
 global texx
 
 
@@ -33,6 +36,8 @@ def loadTexture(texture: str):
         texxData,
     )
     texx.close()
+    global_variables.set_var(name=INITIAL_LOADER_TEXT,
+                             value=f"LOADING {texture}")
     return texxID, texx.size[0], texx.size[1]
 
 

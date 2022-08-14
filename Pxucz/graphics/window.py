@@ -1,17 +1,25 @@
 import glfw
 from OpenGL.GL import *
 from OpenGL.GLU import *
-from Pxucz.initial.set_variables import GRAPHICS_FPS_LIMITER
+from Pxucz.initial.set_variables import GRAPHICS_FPS_LIMITER, INITIAL_LOADER_TEXT
 from Pxucz.utils import global_variables
+from Pxucz.initial import opener
 
 
 def create_window(window_width: int, window_height: int, window_name: str):
-    return glfw.create_window(
-        width=window_width,
-        height=window_height,
-        title=window_name,
-        monitor=None,
-        share=None,
+    glfw.window_hint(glfw.RESIZABLE, glfw.FALSE)
+    global_variables.set_var(name=INITIAL_LOADER_TEXT,
+                             value=f"WINDOW = ({window_width}, {window_height}), TITLE={window_name}")
+    return (
+        glfw.create_window(
+            width=window_width,
+            height=window_height,
+            title=window_name,
+            monitor=None,
+            share=None,
+        ),
+        window_width,
+        window_height,
     )
 
 
@@ -20,11 +28,14 @@ def set_window_icon(window, image):
 
 
 def set_window_aspect_ratio(window, aspect_x, aspect_y):
+    global_variables.set_var(name=INITIAL_LOADER_TEXT,
+                             value=f"WINDOW_ASPECT = ({aspect_x}, {aspect_y})")
     glfw.set_window_aspect_ratio(window=window, numer=aspect_x, denom=aspect_y)
 
 
-def make_context_current(window, window_width, window_height, view_ratio):
+def make_context_current(window, view_ratio):
     glfw.make_context_current(window=window)
+    window_width, window_height = glfw.get_window_size(window)
     gluPerspective(45, (window_width / window_height), 0.1, 50.0)
     glTranslatef(0, 0, view_ratio * -1)
     glEnable(GL_BLEND)
@@ -48,3 +59,7 @@ def set_fps_limit(fps: int):
     while glfw.get_time() <= last + 1 / fps:
         pass
     global_variables.set_var(name=GRAPHICS_FPS_LIMITER, value=last + 1 / fps)
+
+
+def task_start():
+    opener.off()
