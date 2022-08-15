@@ -59,9 +59,10 @@ while not px_window.window_should_close(window=window):
 
 px_window.destroy_window(window=window)
 px_window.terminate()
-
 ```
+
 <br></br>
+
 > simple_movable_map_graphics.py
 ```commandline
 import math
