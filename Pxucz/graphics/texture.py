@@ -1,7 +1,13 @@
+import threading
+
 from Pxucz.graphics import image
 from OpenGL.GL import *
 
-from Pxucz.initial.set_variables import INITIAL_LOADER_TEXT
+from Pxucz.initial.set_variables import (
+    INITIAL_LOADER_TEXT,
+    PXUCZ_ASPECT_X,
+    PXUCZ_ASPECT_Y,
+)
 from Pxucz.utils import global_variables
 
 global texx
@@ -40,14 +46,9 @@ def loadTexture(texture: str):
     return texxID, texx.size[0], texx.size[1]
 
 
-def drawImage(
-    centerX: float,
-    centerY: float,
-    textureID,
-    ratio: float,
-    ASPECT_X: int,
-    ASPECT_Y: int,
-):
+def drawImage(centerX: float, centerY: float, textureID, ratio: float):
+    ASPECT_X = global_variables.get_var(PXUCZ_ASPECT_X)
+    ASPECT_Y = global_variables.get_var(PXUCZ_ASPECT_Y)
     verts = (
         (ratio / ASPECT_X, ratio / ASPECT_Y),
         (ratio / ASPECT_X, -ratio / ASPECT_Y),
