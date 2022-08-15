@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fdf2e79c-ef80-4c9e-b2fe-52d875528e29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/graphics/texture.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/graphics/texture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/graphics/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/graphics/window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/initial/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/initial/init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pxucz/initial/set_variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pxucz/initial/set_variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_posts/2019-08-14-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_posts/2019-08-14-chrome_dinosaur_game.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/simple_movable_map/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/simple_movable_map/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/simple_movable_map/simple_movable_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/simple_movable_map/simple_movable_map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +56,28 @@
       <recent name="D:\Github\Pxucz\Pxucz\utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.clear">
+  <component name="RunManager" selected="Python.build">
+    <configuration name="build" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Pxucz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/simple_movable_map" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/simple_movable_map/build.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="clear" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Pxucz" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,8 +164,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.clear" />
+        <item itemvalue="Python.build" />
         <item itemvalue="Python.simple_movable_map" />
+        <item itemvalue="Python.clear" />
         <item itemvalue="Python.simple_movable_map_graphics" />
         <item itemvalue="Python.texture" />
       </list>
