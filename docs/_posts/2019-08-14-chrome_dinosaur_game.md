@@ -6,7 +6,8 @@ category: Jekyll
 layout: post
 ---
 
-> simple_movable_map.py
+> simple_movable_map.py  
+
 ```commandline
 import glfw
 import Pxucz
